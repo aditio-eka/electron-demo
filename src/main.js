@@ -1,7 +1,6 @@
 const { app, ipcMain, BrowserWindow } = require('electron');
 import { openApp, apps } from 'open';
 import fkill from 'fkill';
-import psList from 'ps-list';
 
 if (require('electron-squirrel-startup')) {
   app.quit();
@@ -24,14 +23,12 @@ function createWindow() {
 let exe = null;
 
 async function openExe() {
-  exe = await openApp(apps.chrome);
+  exe = await openApp('C:/Users/aditio_pangestu/Downloads/Finger BPJS 64Bit/Aplikasi Sidik Jari BPJS Kesehatan/After.exe');
 }
 
 async function closeExe() {
   if (exe) {
-    const pslist = await psList();
-    console.log(psList)
-    await fkill(apps.chrome)
+    await fkill('After.exe', { force: true })
   }
 }
 
