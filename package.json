@@ -35,15 +35,11 @@
     "style-loader": "^3.0.0"
   },
   "dependencies": {
-    "active-win": "^8.1.1",
     "electron-squirrel-startup": "^1.0.0",
     "fkill": "^8.1.1",
     "open": "^9.1.0",
     "ps-list": "^8.1.1",
-    "ps-tree": "^1.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "taskkill": "^5.0.0",
-    "tree-kill": "^1.2.2"
+    "react-dom": "^18.2.0"
   }
 }
