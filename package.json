@@ -35,6 +35,9 @@
     "style-loader": "^3.0.0"
   },
   "dependencies": {
+    "@nut-tree/nut-js": "^3.1.2",
+    "@nut-tree/template-matcher": "^2.0.0",
+    "@udarrr/template-matcher": "^4.5.4",
     "electron-squirrel-startup": "^1.0.0",
     "fkill": "^8.1.1",
     "open": "^9.1.0",

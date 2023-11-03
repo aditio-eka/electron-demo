@@ -1,6 +1,11 @@
 const { app, ipcMain, BrowserWindow } = require('electron');
-import { openApp, apps } from 'open';
+import { openApp } from 'open';
 import fkill from 'fkill';
+import { screen, imageResource, keyboard, Key } from '@nut-tree/nut-js';
+import "@udarrr/template-matcher"
+
+screen.config.confidence = 0.4
+keyboard.config.autoDelayMs = 16
 
 if (require('electron-squirrel-startup')) {
   app.quit();
@@ -24,6 +29,12 @@ let exe = null;
 
 async function openExe() {
   exe = await openApp('C:/Users/aditio_pangestu/Downloads/Finger BPJS 64Bit/Aplikasi Sidik Jari BPJS Kesehatan/After.exe');
+  await screen.waitFor(imageResource('./img/fingerprint-bpjs-title-ui.png'))
+  await keyboard.type('BEFRIENTYOKTALITA')
+  await keyboard.type(Key.Tab)
+  await keyboard.type('Enty1234!')
+  await keyboard.type(Key.Tab)
+  await keyboard.type(Key.Enter)
 }
 
 async function closeExe() {
